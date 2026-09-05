@@ -25,28 +25,23 @@ AWS_SECRET_ACCESS_KEY_ENV_KEY = "AWS_SECRET_ACCESS_KEY"
 REGION_NAME = "us-east-1"
 
 
+# Data Ingestion related constant start with DATA_INGESTION VAR NAME
 
-"""
-Data Ingestion related constant start with DATA_INGESTION VAR NAME
-"""
 DATA_INGESTION_COLLECTION_NAME: str = "Loan_defaultDB-Data"
 DATA_INGESTION_DIR_NAME: str = "data_ingestion"
 DATA_INGESTION_FEATURE_STORE_DIR: str = "feature_store"
 DATA_INGESTION_INGESTED_DIR: str = "ingested"
 DATA_INGESTION_TRAIN_TEST_SPLIT_RATIO: float = 0.20
-"""
 
 
+# Data Validation realted contant start with DATA_VALIDATION VAR NAME
 
-
-Data Validation realted contant start with DATA_VALIDATION VAR NAME
-"""
 DATA_VALIDATION_DIR_NAME: str = "data_validation"
 DATA_VALIDATION_REPORT_FILE_NAME: str = "report.yaml"
 
-"""
-Data Transformation ralated constant start with DATA_TRANSFORMATION VAR NAME
-"""
+
+# Data Transformation ralated constant start with DATA_TRANSFORMATION VAR NAME
+
 DATA_TRANSFORMATION_DIR_NAME: str = "data_transformation"
 DATA_TRANSFORMATION_TRANSFORMED_DATA_DIR: str = "transformed"
 DATA_TRANSFORMATION_TRANSFORMED_OBJECT_DIR: str = "transformed_object"

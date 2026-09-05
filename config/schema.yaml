@@ -1,0 +1,67 @@
+columns:
+  - LoanID: str
+  - Age: int
+  - Income: int
+  - LoanAmount: int
+  - CreditScore: int
+  - MonthsEmployed: int
+  - NumCreditLines: int
+  - InterestRate: float
+  - LoanTerm: int
+  - DTIRatio: float
+  - Education: category
+  - EmploymentType: category
+  - MaritalStatus: category
+  - HasMortgage: category
+  - HasDependents: category
+  - LoanPurpose: category
+  - HasCoSigner: category
+  - Default: int
+
+numerical_columns:
+  - Age
+  - Income
+  - LoanAmount
+  - CreditScore
+  - MonthsEmployed
+  - NumCreditLines
+  - InterestRate
+  - LoanTerm
+  - DTIRatio
+  - Default
+
+categorical_columns:
+  - Education
+  - EmploymentType
+  - MaritalStatus
+  - HasMortgage
+  - HasDependents
+  - LoanPurpose
+  - HasCoSigner
+
+# these three groups map to three different encoding steps
+ordinal_columns:
+  - Education          # mapped High School:0, Bachelor's:1, Master's:2, PhD:3
+
+binary_columns:
+  - HasMortgage         # mapped No:0, Yes:1
+  - HasDependents
+  - HasCoSigner
+
+onehot_columns:
+  - EmploymentType       # OneHotEncoder(drop="first")
+  - MaritalStatus
+  - LoanPurpose
+
+drop_columns: LoanID
+
+sc_columns:
+  - Age
+  - Income
+  - LoanAmount
+  - CreditScore
+  - MonthsEmployed
+  - NumCreditLines
+  - InterestRate
+  - LoanTerm
+  - DTIRatio

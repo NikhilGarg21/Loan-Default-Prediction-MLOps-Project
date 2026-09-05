@@ -92,3 +92,5 @@ dist/
 *.egg-info/
 
 dummy.txt
+artifact/
+notebook/

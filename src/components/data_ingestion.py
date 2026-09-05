@@ -9,7 +9,7 @@ from src.entity.config_entity import DataIngestionConfig
 from src.entity.artifact_entity import DataIngestionArtifact
 from src.exception import MyException
 from src.logger import logging
-from src.data_access.DriveSure_data import DriveSureData
+from src.data_access.LoanDefault_data import DriveSureData
 
 class DataIngestion:
     def __init__(self,data_ingestion_config:DataIngestionConfig=DataIngestionConfig()):
