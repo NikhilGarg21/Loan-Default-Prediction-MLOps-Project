@@ -1,0 +1,36 @@
+# Git
+.git
+.gitignore
+
+# Virtual environments
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Artifacts and logs
+artifact/
+logs/
+
+# Python build files
+*.egg-info/
+src.egg-info/
+
+# Development files
+.vscode/
+notebook/
+
+# Personal files
+personal.txt
+
+# Environment variables
+.env
+
+# ML training output
+catboost_info/
+
+# Documentation
+README.md
+LICENSE
