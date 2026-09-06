@@ -1,4 +1,4 @@
-ROM python:3.10-slim-bookworm
+FROM python:3.10-slim-bookworm
 
 WORKDIR /app
 
