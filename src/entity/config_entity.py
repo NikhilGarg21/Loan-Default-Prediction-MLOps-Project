@@ -34,3 +34,18 @@ class DataTransformationConfig:
     transformed_train_file_path: str = os.path.join(data_transformation_dir, DATA_TRANSFORMATION_TRANSFORMED_DATA_DIR, TRAIN_FILE_NAME.replace("csv", "npz"))
     transformed_test_file_path: str = os.path.join(data_transformation_dir, DATA_TRANSFORMATION_TRANSFORMED_DATA_DIR, TEST_FILE_NAME.replace("csv", "npz"))
     transformed_object_file_path: str = os.path.join(data_transformation_dir, DATA_TRANSFORMATION_TRANSFORMED_OBJECT_DIR, PREPROCSSING_OBJECT_FILE_NAME)
+
+
+@dataclass
+class ModelTrainerConfig:
+    model_trainer_dir: str = os.path.join(training_pipeline_config.artifact_dir, MODEL_TRAINER_DIR_NAME)
+    trained_model_file_path: str = os.path.join(model_trainer_dir, MODEL_TRAINER_TRAINED_MODEL_DIR, MODEL_FILE_NAME)
+    expected_accuracy: float = MODEL_TRAINER_EXPECTED_SCORE
+    _iterations: int = MODEL_TRAINER_ITERATIONS
+    _learning_rate: float = MODEL_TRAINER_LEARNING_RATE
+    _depth: int = MODEL_TRAINER_DEPTH
+    _l2_leaf_reg: int = MODEL_TRAINER_L2_LEAF_REG
+    _subsample: float = MODEL_TRAINER_SUBSAMPLE
+    _random_strength: int = MODEL_TRAINER_RANDOM_STRENGTH
+    _random_state: int = MODEL_TRAINER_RANDOM_STATE
+    _model_threshold: float = MODEL_TRAINER_THRESHOLD
