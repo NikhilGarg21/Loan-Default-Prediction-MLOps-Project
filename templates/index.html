@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Default Prediction</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Loan Default Prediction</h1>
+        <form method="post" action="/">
+            <label for="Age">Age:</label>
+            <input type="text" inputmode="numeric" pattern="[0-9]*" id="Age" name="Age" min="18" max="70" required>
+
+            <label for="Income">Annual Income:</label>
+            <input type="text" inputmode="decimal" id="Income" name="Income" min="15000" max="150000" required>
+
+            <label for="LoanAmount">Loan Amount:</label>
+            <input type="text" inputmode="decimal" id="LoanAmount" name="LoanAmount" min="5000" max="250000" required>
+
+            <label for="CreditScore">Credit Score:</label>
+            <input type="text" inputmode="numeric" pattern="[0-9]*" id="CreditScore" name="CreditScore" min="300"
+                max="850" required>
+
+            <label for="MonthsEmployed">Months Employed:</label>
+            <input type="text" inputmode="numeric" pattern="[0-9]*" id="MonthsEmployed" name="MonthsEmployed" min="0"
+                max="120" required>
+
+            <label for="NumCreditLines">Number of Credit Lines:</label>
+            <input type="text" inputmode="numeric" pattern="[0-9]*" id="NumCreditLines" name="NumCreditLines" min="1"
+                max="4" required>
+
+            <label for="InterestRate">Interest Rate (%):</label>
+            <input type="text" inputmode="decimal" id="InterestRate" name="InterestRate" min="2" max="25" required>
+
+            <label for="LoanTerm">Loan Term (months):</label>
+            <input type="text" inputmode="numeric" pattern="[0-9]*" id="LoanTerm" name="LoanTerm" min="12" max="60"
+                required>
+
+            <label for="DTIRatio">Debt-to-Income Ratio:</label>
+            <input type="text" inputmode="decimal" id="DTIRatio" name="DTIRatio" min="0.1" max="0.9" required>
+            
+            <label for="Education">Education:</label>
+            <select id="Education" name="Education" required>
+                <option value="0">High School</option>
+                <option value="1">Bachelor's</option>
+                <option value="2">Master's</option>
+                <option value="3">PhD</option>
+            </select>
+
+            <label for="EmploymentType">Employment Type:</label>
+            <select id="EmploymentType" name="EmploymentType" required>
+                <option value="Full-time">Full-time</option>
+                <option value="Part-time">Part-time</option>
+                <option value="Self-employed">Self-employed</option>
+                <option value="Unemployed">Unemployed</option>
+            </select>
+
+            <label for="MaritalStatus">Marital Status:</label>
+            <select id="MaritalStatus" name="MaritalStatus" required>
+                <option value="Single">Single</option>
+                <option value="Married">Married</option>
+                <option value="Divorced">Divorced</option>
+            </select>
+
+            <label for="HasMortgage">Has Mortgage:</label>
+            <select id="HasMortgage" name="HasMortgage" required>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+            <label for="HasDependents">Has Dependents:</label>
+            <select id="HasDependents" name="HasDependents" required>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+            <label for="LoanPurpose">Loan Purpose:</label>
+            <select id="LoanPurpose" name="LoanPurpose" required>
+                <option value="Home">Home</option>
+                <option value="Auto">Auto</option>
+                <option value="Education">Education</option>
+                <option value="Business">Business</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="HasCoSigner">Has Co-Signer:</label>
+            <select id="HasCoSigner" name="HasCoSigner" required>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+
+</html>

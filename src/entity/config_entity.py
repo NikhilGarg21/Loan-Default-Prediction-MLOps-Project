@@ -61,6 +61,9 @@ class ModelPusherConfig:
     hf_repo_id: str = os.getenv(HF_REPO_ID_ENV_KEY)
     hf_model_path: str = MODEL_FILE_NAME
 
-# @dataclass
-# class LoanDefaultPredictorConfig:
-#     model_file_path: str = HF_MODEL_FILE_NAME
+@dataclass
+class LoanDefaultPredictorConfig:
+    hf_repo_id: str = os.getenv(HF_REPO_ID_ENV_KEY)
+    model_file_path: str = MODEL_FILE_NAME
+
+    

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+
+    <div class="container result-container">
+
+        <h1>Prediction Result</h1>
+
+        {% if status == "Will Default" %}
+
+        <div class="prediction-card default-card">
+
+            <div class="icon">
+                ⚠
+            </div>
+
+            <h2>Will Default</h2>
+
+            <p>
+                The model predicts a higher probability
+                of loan default.
+            </p>
+
+        </div>
+
+        {% else %}
+
+        <div class="prediction-card repay-card">
+
+            <div class="icon">
+                ✓
+            </div>
+
+            <h2>Will Repay</h2>
+
+            <p>
+                The model predicts that the applicant
+                is likely to repay the loan.
+            </p>
+
+        </div>
+
+        {% endif %}
+
+
+        <a href="/">
+            <button>
+                Make Another Prediction
+            </button>
+        </a>
+
+    </div>
+</body>
+
+</html>

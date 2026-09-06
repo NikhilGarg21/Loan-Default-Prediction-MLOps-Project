@@ -94,8 +94,6 @@ class ModelEvaluation:
             x = self._map_binary_columns(x)
             x = self._map_ordinal_columns(x)
 
-            training_model = load_object(file_path=self.model_trainer_artifact.trained_model_file_path)
-            logging.info("Trained model loaded ...")
             trained_model_f1_score = self.model_trainer_artifact.metric_artifact.f1_score
             logging.info(f"F1_Score for this model: {trained_model_f1_score}")
 
