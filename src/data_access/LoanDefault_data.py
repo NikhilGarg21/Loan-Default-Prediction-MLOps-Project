@@ -7,7 +7,7 @@ from src.configuration.mongo_db_connection import MongoDBClient
 from src.constants import DATABASE_NAME
 from src.exception import MyException
 
-class DriveSureData:
+class LoanDefaultData:
     """
     A class to export MongoDB records as a pandas DataFrame.
     """
