@@ -20,9 +20,7 @@ TEST_FILE_NAME: str = "test.csv"
 SCHEMA_FILE_PATH = os.path.join("config", "schema.yaml")
 
 
-AWS_ACCESS_KEY_ID_ENV_KEY = "AWS_ACCESS_KEY_ID"
-AWS_SECRET_ACCESS_KEY_ENV_KEY = "AWS_SECRET_ACCESS_KEY"
-REGION_NAME = "us-east-1"
+HF_TOKEN_ENV_KEY = "HF_TOKEN"
 
 
 # Data Ingestion related constant start with DATA_INGESTION VAR NAME
@@ -51,7 +49,6 @@ DATA_TRANSFORMATION_TRANSFORMED_OBJECT_DIR: str = "transformed_object"
 
 MODEL_TRAINER_DIR_NAME: str = "model_trainer"
 MODEL_TRAINER_TRAINED_MODEL_DIR: str = "trained_model"
-MODEL_TRAINER_TRAINED_MODEL_NAME: str = "model.pkl"
 MODEL_TRAINER_EXPECTED_SCORE: float = 0.6
 MODEL_TRAINER_ITERATIONS: int = 700
 MODEL_TRAINER_LEARNING_RATE: float = 0.03
@@ -61,12 +58,11 @@ MODEL_TRAINER_SUBSAMPLE: float = 0.7
 MODEL_TRAINER_RANDOM_STRENGTH: int = 2
 MODEL_TRAINER_RANDOM_STATE: int = 42
 MODEL_TRAINER_THRESHOLD: float = 0.4777
-"""
-MODEL Evaluation related constants
-"""
+
+# MODEL Evaluation related constants
+
 MODEL_EVALUATION_CHANGED_THRESHOLD_SCORE: float = 0.02
-MODEL_BUCKET_NAME = "my-model-mlopsproj"
-MODEL_PUSHER_S3_KEY = "model-registry"
+HF_REPO_ID_ENV_KEY = "HF_REPO_ID"
 
 
 APP_HOST = "0.0.0.0"
